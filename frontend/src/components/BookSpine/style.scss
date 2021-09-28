@@ -1,0 +1,31 @@
+.book-spine-wrapper {
+  /* 位置とサイズ */
+  height: 200px;
+
+  /* 形と色 */
+  background-color: #c4c4c4;
+
+  /* 内部のレイアウト */
+  display: flex;
+  flex-basis: auto;
+  justify-content: flex-start;
+  padding: 1rem 0.5rem;
+
+  /* 縦書き */
+  writing-mode: vertical-rl;
+  text-align: left;
+
+  /* ふるまい */
+  cursor: pointer;
+
+  /* ブラウザのズームで子要素が飛び出すため、一時的措置 */
+  overflow: hidden;
+
+  &:focus {
+    border: red 1px solid;
+  }
+
+  p {
+    margin: 0;
+  }
+}

@@ -1,0 +1,43 @@
+// 棚板の「板」の奥行きを表す値
+$ita-depth: 2vw;
+
+.tanaita {
+  &--container {
+    /* 中身のレイアウト */
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    padding: 2rem 2rem 0;
+
+    /* 位置とサイズ */
+    margin: -0.5rem; // &--ita に少し重ならせる
+    z-index: 1; // 重なる際は上に乗せる
+    position: relative;
+  }
+
+  &--ita {
+    width: calc(90vw + $ita-depth * 2);
+    height: 5px;
+    margin-left: -$ita-depth;
+
+    // 棚板の「板」の地面に並行な部分
+    &-1 {
+      background-color: #e2d5bf;
+      height: 1rem;
+
+      // 長方形を台形に切り抜く
+      clip-path: polygon(
+        0% 100%,
+        $ita-depth 0%,
+        calc(100% - $ita-depth) 0%,
+        100% 100%
+      );
+    }
+
+    // 棚板の「板」の地面に垂直な部分
+    &-2 {
+      background-color: #f2e5d0;
+      height: 5px;
+    }
+  }
+}

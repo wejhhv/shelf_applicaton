@@ -1,0 +1,35 @@
+.app-bar {
+  box-sizing: border-box;
+  height: 50px;
+  width: 100vw;
+  background-color: #ffffff; // TODO: 色はよしなに変更する
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8px 5vw;
+
+  &--logo {
+    display: block;
+    height: 100%;
+  }
+
+  &--title-logo {
+    margin-left: 8px;
+    height: 75%;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  &--books-register {
+    background-color: #c9a584;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 100px; // 大きい固定値ならなんでも良い
+    color: white;
+    cursor: pointer;
+  }
+}

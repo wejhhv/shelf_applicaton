@@ -1,0 +1,9 @@
+# dev
+bin/
+include/
+lib/
+lib64
+__pycache__
+
+# misc
+.DS_Store
